@@ -1,0 +1,9 @@
+/* ============================================================
+   Ember Studio — Webfonts
+   All three families are Google Fonts (exact, no substitution).
+   Loaded via Google Fonts CDN @import. If you need fully
+   self-hosted binaries, drop the woff2 files in tokens/fonts/
+   and replace these @import lines with @font-face rules.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..700&family=Source+Sans+3:ital,wght@0,400..700;1,400..600&family=Fira+Code:wght@400..600&display=swap");

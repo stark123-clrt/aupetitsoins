@@ -1,0 +1,146 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/*
+  ============================================================
+  THEME CONFIGURATION
+  ============================================================
+
+  Theme: "Aux Petits Soins" brand palette — matched to the
+  client's logo (dusty rose + warm taupe, soft/caring feel).
+  Headings: Playfair Display. Body/UI: Source Sans 3.
+  Mode:  light (:root, default) / dark (.dark)
+  ============================================================
+*/
+
+:root {
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --radius: 0.75rem;
+  --background: #fdfbfa;
+  --foreground: #2b211d;
+  --card: #ffffff;
+  --card-foreground: #2b211d;
+  --popover: #ffffff;
+  --popover-foreground: #2b211d;
+  --primary: #c1607a;
+  --primary-foreground: #ffffff;
+  --secondary: #eee3db;
+  --secondary-foreground: #4a3b30;
+  --muted: #f6f1ee;
+  --muted-foreground: #8b7a6e;
+  --accent: #fbeaef;
+  --accent-foreground: #9c3e58;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e7ddd6;
+  --input: #e7ddd6;
+  --ring: #c1607a;
+  --chart-1: #c1607a;
+  --chart-2: #a9866d;
+  --chart-3: #16a34a;
+  --chart-4: #2563eb;
+  --chart-5: #7c3aed;
+  --sidebar: #fdfbfa;
+  --sidebar-foreground: #2b211d;
+  --sidebar-primary: #c1607a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #fbeaef;
+  --sidebar-accent-foreground: #9c3e58;
+  --sidebar-border: #e7ddd6;
+  --sidebar-ring: #c1607a;
+}
+
+.dark {
+  --background: #241a17;
+  --foreground: #fbf3f1;
+  --card: #2e2320;
+  --card-foreground: #fbf3f1;
+  --popover: #2e2320;
+  --popover-foreground: #fbf3f1;
+  --primary: #d9738c;
+  --primary-foreground: #ffffff;
+  --secondary: #4a3b33;
+  --secondary-foreground: #f3e9e3;
+  --muted: #332723;
+  --muted-foreground: #b3a198;
+  --accent: #4a2e36;
+  --accent-foreground: #f3b9c6;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #4a3b33;
+  --input: #4a3b33;
+  --ring: #d9738c;
+  --chart-1: #d9738c;
+  --chart-2: #c2a186;
+  --chart-3: #22c55e;
+  --chart-4: #3b82f6;
+  --chart-5: #a78bfa;
+  --sidebar: #2e2320;
+  --sidebar-foreground: #fbf3f1;
+  --sidebar-primary: #d9738c;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #4a2e36;
+  --sidebar-accent-foreground: #f3b9c6;
+  --sidebar-border: #4a3b33;
+  --sidebar-ring: #d9738c;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}

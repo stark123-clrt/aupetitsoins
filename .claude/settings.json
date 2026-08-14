@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx vite *)",
+      "Bash(npm uninstall *)",
+      "Bash(/c/php/php.exe bin/console doctrine:migrations:migrate --no-interaction)",
+      "Bash(/c/php/php.exe bin/console app:seed-users)",
+      "Bash(/c/php/php.exe -r 'imagepng\\(imagecreatetruecolor\\(10,10\\), '\\\\''/c/Users/chris/AppData/Local/Temp/claude/c--Users-chris-Desktop-Aupetitsoin/a1d3fc1d-b257-470d-92f7-2f5635d18e08/scratchpad/test.png'\\\\''\\);')",
+      "Bash(/c/php/php.exe -r \"imagepng\\(imagecreatetruecolor\\(10,10\\), 'C:\\\\\\\\\\\\\\\\Users\\\\\\\\\\\\\\\\chris\\\\\\\\\\\\\\\\AppData\\\\\\\\\\\\\\\\Local\\\\\\\\\\\\\\\\Temp\\\\\\\\\\\\\\\\claude\\\\\\\\\\\\\\\\c--Users-chris-Desktop-Aupetitsoin\\\\\\\\\\\\\\\\a1d3fc1d-b257-470d-92f7-2f5635d18e08\\\\\\\\\\\\\\\\scratchpad\\\\\\\\\\\\\\\\test.png'\\);\")",
+      "Bash(/c/php/php.exe /c/php/composer.phar require symfony/mime --no-interaction)"
+    ]
+  }
+}

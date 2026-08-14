@@ -1,0 +1,119 @@
+/* ============================================================
+   Ember Studio — Color Tokens
+   Warm, craft-focused palette: terracotta + stone + amber.
+   Base values first, then semantic aliases.
+   Never use pure black / pure white — always the warm values.
+   ============================================================ */
+
+:root {
+  /* ---- Brand: Terracotta scale ---- */
+  --terracotta-700: #9A3412; /* burnt sienna — primary hover / press */
+  --terracotta-600: #C2410C; /* PRIMARY — CTAs, active, links, focus */
+  --terracotta-100: #FDEBE0; /* tinted active backgrounds */
+  --terracotta-050: #FBF3EE; /* very light wash */
+
+  /* ---- Accent: Amber ---- */
+  --amber-500: #F59E0B; /* notifications, badges, new-item dots */
+  --amber-100: #FEF3C7; /* amber tint background */
+
+  /* ---- Warm neutrals (Stone) ---- */
+  --stone-900: #1C1917; /* warm near-black — headings/body */
+  --stone-700: #57534E; /* warm gray — secondary text */
+  --stone-500: #78716C; /* stone — muted text, placeholders, meta */
+  --stone-300: #D6D3D1; /* warm borders, dividers */
+  --stone-200: #E7E5E4; /* raised surface, hover rows, tracks */
+  --stone-100: #F5F5F4; /* surface — cards, panels */
+  --stone-050: #FAFAF9; /* warm white page background */
+
+  /* ---- Semantic status ---- */
+  --green-600: #16A34A;  /* success — completed, approved */
+  --green-100: #DCFCE7;
+  --orange-600: #D97706; /* warning — due soon, caution */
+  --orange-100: #FEF0D9;
+  --red-600: #DC2626;    /* error — overdue, destructive */
+  --red-100: #FEE2E2;
+
+  /* ---- Project stripe colors (card left stripes) ---- */
+  --project-terracotta: #C2410C;
+  --project-amber: #F59E0B;
+  --project-green: #16A34A;
+  --project-blue: #2563EB;
+  --project-violet: #7C3AED;
+  --project-rose: #E11D48;
+
+  /* ============================================================
+     Semantic aliases — reference these in components
+     ============================================================ */
+
+  /* Backgrounds & surfaces */
+  --bg-page: var(--stone-050);
+  --surface-card: var(--stone-100);
+  --surface-raised: var(--stone-200);
+  --surface-overlay: var(--stone-050);
+
+  /* Text */
+  --text-primary: var(--stone-900);
+  --text-secondary: var(--stone-700);
+  --text-muted: var(--stone-500);
+  --text-on-primary: #ffffff;
+  --text-link: var(--terracotta-600);
+
+  /* Borders & dividers */
+  --border-default: var(--stone-300);
+  --border-strong: var(--stone-500);
+  --border-subtle: var(--stone-200);
+
+  /* Interactive (primary) */
+  --primary: var(--terracotta-600);
+  --primary-hover: var(--terracotta-700);
+  --primary-tint: var(--terracotta-100);
+  --focus-ring: rgba(194, 65, 12, 0.12);
+
+  /* Accent */
+  --accent: var(--amber-500);
+  --accent-tint: var(--amber-100);
+
+  /* Status */
+  --success: var(--green-600);
+  --success-tint: var(--green-100);
+  --warning: var(--orange-600);
+  --warning-tint: var(--orange-100);
+  --error: var(--red-600);
+  --error-tint: var(--red-100);
+}
+
+/* ============================================================
+   Dark mode — intentional, not inverted.
+   Apply via [data-theme="dark"] on <html> or a container.
+   ============================================================ */
+[data-theme="dark"] {
+  --bg-page: #1C1917;
+  --surface-card: #292524;
+  --surface-raised: #44403C;
+  --surface-overlay: #292524;
+
+  --text-primary: #FAFAF9;
+  --text-secondary: #D6D3D1;
+  --text-muted: #A8A29E;
+  --text-on-primary: #ffffff;
+  --text-link: #FB923C;
+
+  --border-default: #44403C;
+  --border-strong: #57534E;
+  --border-subtle: #292524;
+
+  --primary: #EA580C;
+  --primary-hover: #F97316;
+  --primary-tint: rgba(234, 88, 12, 0.18);
+  --focus-ring: rgba(234, 88, 12, 0.28);
+
+  --accent: #FBBF24;
+  --accent-tint: rgba(251, 191, 36, 0.16);
+
+  --success: #22C55E;
+  --success-tint: rgba(34, 197, 94, 0.16);
+  --warning: #F59E0B;
+  --warning-tint: rgba(245, 158, 11, 0.16);
+  --error: #EF4444;
+  --error-tint: rgba(239, 68, 68, 0.16);
+}

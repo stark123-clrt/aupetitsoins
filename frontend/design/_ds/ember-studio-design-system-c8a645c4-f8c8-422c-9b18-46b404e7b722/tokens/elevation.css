@@ -1,0 +1,28 @@
+/* ============================================================
+   Ember Studio — Elevation & Motion Tokens
+   Cards rest flat with a 1px warm border; lift softly on hover.
+   Warm-tinted shadows (never cool/blue).
+   ============================================================ */
+
+:root {
+  /* Shadows */
+  --shadow-card-hover: 0 4px 16px rgba(28, 25, 23, 0.06);
+  --shadow-primary-glow: 0 4px 12px rgba(194, 65, 12, 0.25);
+  --shadow-modal: 0 24px 48px rgba(28, 25, 23, 0.12);
+  --shadow-popover: 0 8px 24px rgba(28, 25, 23, 0.10);
+
+  /* Focus ring (warm terracotta) */
+  --ring-focus: 0 0 0 3px rgba(194, 65, 12, 0.12);
+
+  /* Backdrop */
+  --backdrop: rgba(28, 25, 23, 0.40);
+  --backdrop-blur: 8px;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  /* buttons, hovers */
+  --dur-fast: 150ms; /* @kind other */
+  /* progress fills, expands */
+  --dur-medium: 300ms; /* @kind other */
+  --backdrop-blur-radius: 8px; /* @kind other */
+}
