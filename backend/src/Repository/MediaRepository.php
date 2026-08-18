@@ -30,4 +30,19 @@ class MediaRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+
+    /**
+     * @return Media[]
+     */
+    public function findRecent(int $limit): array
+    {
+        return $this->createQueryBuilder('m')
+            ->innerJoin('m.service', 's')
+            ->addSelect('s')
+            ->andWhere('s.active = true')
+            ->orderBy('m.createdAt', 'DESC')
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+    }
 }

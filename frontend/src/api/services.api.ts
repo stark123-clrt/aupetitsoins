@@ -1,4 +1,11 @@
-import type { Comment, Paginated, Service, ServiceDetail } from "@/types";
+import type {
+  Comment,
+  Paginated,
+  RecentComment,
+  RecentMedia,
+  Service,
+  ServiceDetail,
+} from "@/types";
 import { apiFetch } from "./client";
 
 export async function getServices(category?: string): Promise<Service[]> {
@@ -30,4 +37,18 @@ export async function postServiceComment(
     method: "POST",
     body: JSON.stringify(input),
   });
+}
+
+export async function getRecentComments(limit = 6): Promise<RecentComment[]> {
+  const { items } = await apiFetch<{ items: RecentComment[] }>(
+    `/comments/recent?limit=${limit}`
+  );
+  return items;
+}
+
+export async function getRecentMedia(limit = 6): Promise<RecentMedia[]> {
+  const { items } = await apiFetch<{ items: RecentMedia[] }>(
+    `/media/recent?limit=${limit}`
+  );
+  return items;
 }

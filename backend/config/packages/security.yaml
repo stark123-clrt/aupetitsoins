@@ -42,6 +42,8 @@ security:
         - { path: ^/api/auth/refresh, roles: PUBLIC_ACCESS }
         - { path: ^/api/services/[^/]+/comments, roles: PUBLIC_ACCESS }
         - { path: ^/api/services, roles: PUBLIC_ACCESS, methods: [GET] }
+        - { path: ^/api/comments/recent, roles: PUBLIC_ACCESS, methods: [GET] }
+        - { path: ^/api/media/recent, roles: PUBLIC_ACCESS, methods: [GET] }
         - { path: ^/api/admin, roles: ROLE_ADMIN }
         - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
 

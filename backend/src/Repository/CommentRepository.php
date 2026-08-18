@@ -34,6 +34,22 @@ class CommentRepository extends ServiceEntityRepository
     /**
      * @return Comment[]
      */
+    public function findRecentApproved(int $limit): array
+    {
+        return $this->createQueryBuilder('c')
+            ->innerJoin('c.service', 's')
+            ->addSelect('s')
+            ->andWhere('c.approved = true')
+            ->andWhere('s.active = true')
+            ->orderBy('c.createdAt', 'DESC')
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+    }
+
+    /**
+     * @return Comment[]
+     */
     public function findAllOrdered(): array
     {
         return $this->createQueryBuilder('c')

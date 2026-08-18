@@ -16,4 +16,13 @@ final class MediaPresenter
             'createdAt' => $media->getCreatedAt()->format(DATE_ATOM),
         ];
     }
+
+    public static function toArrayWithService(Media $media): array
+    {
+        return [
+            ...self::toArray($media),
+            'serviceTitle' => $media->getService()->getTitle(),
+            'serviceSlug' => $media->getService()->getSlug(),
+        ];
+    }
 }

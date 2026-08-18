@@ -17,4 +17,13 @@ final class CommentPresenter
             'createdAt' => $comment->getCreatedAt()->format(DATE_ATOM),
         ];
     }
+
+    public static function toArrayWithService(Comment $comment): array
+    {
+        return [
+            ...self::toArray($comment),
+            'serviceTitle' => $comment->getService()->getTitle(),
+            'serviceSlug' => $comment->getService()->getSlug(),
+        ];
+    }
 }

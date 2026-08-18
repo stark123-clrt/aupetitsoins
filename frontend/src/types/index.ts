@@ -45,6 +45,16 @@ export interface Comment {
   createdAt: string;
 }
 
+export interface RecentComment extends Comment {
+  serviceTitle: string;
+  serviceSlug: string;
+}
+
+export interface RecentMedia extends Media {
+  serviceTitle: string;
+  serviceSlug: string;
+}
+
 export interface Paginated<T> {
   items: T[];
   total: number;

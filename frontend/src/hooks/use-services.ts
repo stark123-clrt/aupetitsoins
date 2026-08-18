@@ -2,6 +2,8 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import {
   type CommentInput,
+  getRecentComments,
+  getRecentMedia,
   getService,
   getServiceComments,
   getServices,
@@ -29,6 +31,20 @@ export function useServiceComments(slug: string) {
     queryKey: queryKeys.serviceComments(slug),
     queryFn: () => getServiceComments(slug),
     enabled: !!slug,
+  });
+}
+
+export function useRecentComments(limit = 6) {
+  return useQuery({
+    queryKey: queryKeys.recentComments(limit),
+    queryFn: () => getRecentComments(limit),
+  });
+}
+
+export function useRecentMedia(limit = 6) {
+  return useQuery({
+    queryKey: queryKeys.recentMedia(limit),
+    queryFn: () => getRecentMedia(limit),
   });
 }
 
