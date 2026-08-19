@@ -24,7 +24,7 @@ export function ContactForm({ categories }: { categories: Category[] }) {
 
       {state.success ? (
         <div className="mt-6 rounded-xl border border-success-fg/25 bg-background px-4 py-3.5 text-[14.5px] text-success-fg">
-          Demande envoyée. Vous recevrez une réponse sous 24 h ouvrées.
+          Demande envoyée. Aïssata vous recontacte dès que possible.
         </div>
       ) : (
         <form action={formAction} className="mt-6.5 grid grid-cols-2 gap-4">
