@@ -18,13 +18,13 @@ const STEPS = [
   },
   {
     n: 2,
-    title: "Contactez-nous",
-    text: "Décrivez votre besoin, Aïssata vous rappelle pour un devis sans engagement.",
+    title: "Contactez-moi",
+    text: "Décrivez votre besoin, je vous rappelle pour un devis sans engagement.",
   },
   {
     n: 3,
     title: "On s'occupe du reste",
-    text: "Aïssata arrive à l'heure, avec tout le soin nécessaire.",
+    text: "J'arrive à l'heure, avec tout le soin nécessaire.",
   },
 ];
 
@@ -33,7 +33,7 @@ const STEPS = [
 const COMMITMENTS = [
   { value: "50 %", label: "de crédit d'impôt", accent: true },
   { value: "Devis", label: "gratuit et sans engagement" },
-  { value: "Aïssata", label: "votre interlocutrice unique" },
+  { value: "Une seule", label: "interlocutrice, du début à la fin" },
 ];
 
 export default async function HomePage() {
@@ -62,21 +62,21 @@ export default async function HomePage() {
             <em className="text-accent not-italic italic">allégé.</em>
           </h1>
           <p className="mt-6 max-w-[470px] text-[18.5px] leading-relaxed text-foreground-soft text-pretty">
-            Ménage, garde d&apos;enfant et aide administrative, assurés par Aïssata
-            en personne. 50 % de crédit d&apos;impôt sur chaque prestation.
+            Ménage, garde d&apos;enfant et aide administrative, que j&apos;assure en
+            personne. 50 % de crédit d&apos;impôt sur chaque prestation.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3.5">
             <Link
               href="/services"
               className="rounded-full bg-foreground px-7 py-4 text-[15.5px] font-medium text-background"
             >
-              Voir nos services
+              Voir mes prestations
             </Link>
             <Link
               href="/contact"
               className="rounded-full border border-input px-7 py-[15px] text-[15.5px] font-medium"
             >
-              Nous contacter
+              Me contacter
             </Link>
           </div>
           <div className="mt-8 text-[14.5px] text-muted">
@@ -93,7 +93,7 @@ export default async function HomePage() {
             />
           </div>
           <div className="absolute left-2 top-8 rounded-2xl border border-border-2 bg-background px-4.5 py-3.5 shadow-lg sm:-left-7 sm:top-10">
-            <div className="text-[14.5px] font-medium">Toujours Aïssata</div>
+            <div className="text-[14.5px] font-medium">La même personne</div>
             <div className="mt-0.5 text-[13px] text-muted">D&apos;une visite à l&apos;autre</div>
           </div>
           <div className="absolute bottom-8 right-2 rounded-2xl bg-foreground px-5 py-3.5 text-center text-background shadow-lg sm:-right-6">
@@ -103,10 +103,10 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* NOS UNIVERS */}
+      {/* MES UNIVERS */}
       <section id="services" className="mx-auto w-full max-w-[1360px] px-6 pb-24 pt-9 sm:px-12">
         <div className="border-t border-border pt-8">
-          <div className="text-[13px] uppercase tracking-[0.1em] text-muted">Nos univers</div>
+          <div className="text-[13px] uppercase tracking-[0.1em] text-muted">Mes univers</div>
           <h2 className="mt-3 text-[34px] leading-tight tracking-tight sm:text-[46px]">
             Un accompagnement pour chaque besoin
           </h2>
@@ -146,10 +146,10 @@ export default async function HomePage() {
       <section className="mx-auto w-full max-w-[1360px] px-6 pb-24 sm:px-12">
         <div className="border-t border-border pt-8">
           <div className="text-[13px] uppercase tracking-[0.1em] text-muted">
-            Nos services en images
+            Mes prestations en images
           </div>
           <h2 className="mt-3 text-[34px] leading-tight tracking-tight sm:text-[46px]">
-            Voyez une prestation avant de nous contacter
+            Voyez une prestation avant de me contacter
           </h2>
         </div>
 
@@ -157,7 +157,7 @@ export default async function HomePage() {
           <div className="mt-10 rounded-[22px] border border-dashed border-input bg-surface p-16 text-center">
             <Sparkles className="mx-auto size-7 text-accent-soft" />
             <p className="mt-4 text-[15.5px] text-muted">
-              Les photos et vidéos de nos prestations apparaîtront ici au fil des
+              Les photos et vidéos de mes prestations apparaîtront ici au fil des
               interventions.
             </p>
           </div>
@@ -294,14 +294,14 @@ export default async function HomePage() {
             Prêt à alléger votre quotidien ?
           </h2>
           <p className="mx-auto mt-4.5 max-w-[560px] text-[18px] leading-relaxed text-foreground-soft text-pretty">
-            Un appel de dix minutes suffit à savoir si nous sommes le bon service pour
+            Un appel de dix minutes suffit à savoir si je suis la bonne personne pour
             vous.
           </p>
           <Link
             href="/contact"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-4 text-[15.5px] font-medium text-background"
           >
-            Nous contacter
+            Me contacter
             <ArrowRight className="size-4" />
           </Link>
         </div>

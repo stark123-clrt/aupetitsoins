@@ -8,11 +8,11 @@ export const dynamic = "force-dynamic";
 const VALUES = [
   {
     title: "Un visage constant",
-    text: "C'est Aïssata qui vient, d'une visite à l'autre. Vous savez toujours qui passe la porte.",
+    text: "C'est moi qui viens, d'une visite à l'autre. Vous savez toujours qui passe la porte.",
   },
   {
     title: "Un interlocuteur unique",
-    text: "Une seule personne prend les demandes, cale les plannings et rappelle en cas d'imprévu.",
+    text: "Je prends les demandes, cale les plannings et vous rappelle en cas d'imprévu.",
   },
   {
     title: "Un cadre clair",
@@ -58,12 +58,12 @@ export default async function AboutPage() {
           <h2 className="text-[32px] leading-tight sm:text-[38px]">Le parcours</h2>
           <div className="flex max-w-[660px] flex-col gap-5.5">
             <p className="text-[17.5px] leading-[1.7] text-foreground-soft text-pretty">
-              Aïssata a lancé Aux Petits Soins pour travailler autrement : peu de
+              J&apos;ai lancé Aux Petits Soins pour travailler autrement : peu de
               clients, un suivi direct, et la même personne d&apos;une visite à
               l&apos;autre.
             </p>
             <p className="text-[17.5px] leading-[1.7] text-foreground-soft text-pretty">
-              Elle reste votre interlocutrice unique : c&apos;est elle qui prend les
+              Je reste votre interlocutrice unique : c&apos;est moi qui prends les
               demandes, cale les plannings et vous rappelle en cas d&apos;imprévu.
             </p>
           </div>
@@ -92,7 +92,7 @@ export default async function AboutPage() {
             Parlons de votre besoin
           </h2>
           <p className="mx-auto mt-4.5 max-w-[520px] text-[18px] leading-relaxed text-foreground-soft text-pretty">
-            Un appel de dix minutes suffit à savoir si nous sommes le bon service pour
+            Un appel de dix minutes suffit à savoir si je suis la bonne personne pour
             vous.
           </p>
           <div className="mt-7.5 flex flex-wrap justify-center gap-3">
@@ -100,7 +100,7 @@ export default async function AboutPage() {
               href="/contact"
               className="rounded-full bg-foreground px-7 py-4 text-[15.5px] font-medium text-background"
             >
-              Nous contacter
+              Me contacter
             </Link>
             <Link
               href="/services"

@@ -59,7 +59,7 @@ export function ServicesBoard({
       </div>
 
       <div className="mt-7 overflow-hidden rounded-[18px] border border-border bg-surface">
-        <div className="grid grid-cols-[2.2fr_1.3fr_0.8fr_1.2fr] gap-4 bg-[#F5F1E9] px-6 py-3.5 text-[12px] uppercase tracking-[0.08em] text-muted sm:grid-cols-[2.2fr_1.3fr_0.8fr_0.9fr_1.2fr]">
+        <div className="grid grid-cols-[2.2fr_1.3fr_0.8fr_1.2fr] gap-4 bg-panel px-6 py-3.5 text-[12px] uppercase tracking-[0.08em] text-muted sm:grid-cols-[2.2fr_1.3fr_0.8fr_0.9fr_1.2fr]">
           <div>Prestation</div>
           <div>Catégorie</div>
           <div className="hidden sm:block">Médias</div>
@@ -69,7 +69,7 @@ export function ServicesBoard({
         {services.map((s) => (
           <div
             key={s.id}
-            className="grid grid-cols-[2.2fr_1.3fr_0.8fr_1.2fr] items-center gap-4 border-t border-[#F0E8DA] px-6 py-4.5 sm:grid-cols-[2.2fr_1.3fr_0.8fr_0.9fr_1.2fr]"
+            className="grid grid-cols-[2.2fr_1.3fr_0.8fr_1.2fr] items-center gap-4 border-t border-border px-6 py-4.5 sm:grid-cols-[2.2fr_1.3fr_0.8fr_0.9fr_1.2fr]"
           >
             <div>
               <div className="text-[16px] font-medium">{s.title}</div>

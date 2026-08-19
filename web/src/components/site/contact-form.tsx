@@ -19,18 +19,18 @@ export function ContactForm({ categories }: { categories: Category[] }) {
     <div className="rounded-[22px] border border-border-2 bg-surface p-9">
       <h2 className="text-[26px] sm:text-[30px]">Formulaire de contact</h2>
       <p className="mt-2.5 text-[15px] text-muted">
-        Décrivez brièvement votre besoin, Aïssata vous rappelle.
+        Décrivez brièvement votre besoin, je vous rappelle.
       </p>
 
       {state.success ? (
         <div className="mt-6 rounded-xl border border-success-fg/25 bg-background px-4 py-3.5 text-[14.5px] text-success-fg">
-          Demande envoyée. Aïssata vous recontacte dès que possible.
+          Demande envoyée. Je vous recontacte dès que possible.
         </div>
       ) : (
         <form action={formAction} className="mt-6.5 grid grid-cols-2 gap-4">
           <label className="flex flex-col gap-1.5 text-[14px] text-foreground-soft">
             Nom et prénom
-            <input name="fullName" required placeholder="Aïssata Diallo" className={inputClass} />
+            <input name="fullName" required placeholder="Marie Dupont" className={inputClass} />
           </label>
           <label className="flex flex-col gap-1.5 text-[14px] text-foreground-soft">
             Téléphone

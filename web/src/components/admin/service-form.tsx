@@ -9,7 +9,7 @@ import type { Category, Media, Service } from "@prisma/client";
 const INITIAL_STATE: ServiceFormState = {};
 
 const inputClass =
-  "rounded-xl border border-input bg-[#F5F1E9] px-3.5 py-3.5 text-[15.5px] text-foreground outline-none focus:border-accent";
+  "rounded-xl border border-input bg-panel px-3.5 py-3.5 text-[15.5px] text-foreground outline-none focus:border-accent";
 
 export function ServiceForm({
   service,
@@ -82,7 +82,7 @@ export function ServiceForm({
         </label>
         <label className="flex flex-col gap-1.5 text-[14px] text-foreground-soft">
           Visibilité sur le site
-          <label className="flex items-center gap-2.5 rounded-xl border border-input bg-[#F5F1E9] px-3.5 py-3.5 text-[15px]">
+          <label className="flex items-center gap-2.5 rounded-xl border border-input bg-panel px-3.5 py-3.5 text-[15px]">
             <input
               type="checkbox"
               name="active"

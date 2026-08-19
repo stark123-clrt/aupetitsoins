@@ -14,7 +14,7 @@ export default async function AdminLayout({ children }: LayoutProps<"/admin">) {
   const session = await requireAdmin();
 
   return (
-    <div className="grid min-h-svh grid-cols-1 bg-[#F5F1E9] text-foreground md:grid-cols-[268px_1fr]">
+    <div className="grid min-h-svh grid-cols-1 bg-panel text-foreground md:grid-cols-[268px_1fr]">
       <aside className="flex flex-col gap-8.5 bg-foreground px-5.5 py-6.5 text-background">
         <Link href="/" className="flex items-center gap-2.5">
           <Image

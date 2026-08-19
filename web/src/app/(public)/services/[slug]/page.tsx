@@ -97,7 +97,7 @@ export default async function ServiceDetailPage({
               </Link>
             </div>
             <div className="mt-6.5 flex flex-col gap-3 border-t border-border pt-5 text-[14.5px] text-foreground-soft">
-              <div>Toujours Aïssata, d&apos;une visite à l&apos;autre</div>
+              <div>La même personne, d&apos;une visite à l&apos;autre</div>
               <div>Devis gratuit et sans engagement</div>
               <div>Attestation fiscale en janvier</div>
             </div>
@@ -150,7 +150,7 @@ export default async function ServiceDetailPage({
           <div className="rounded-[22px] bg-tint p-7.5">
             <h3 className="text-[26px] sm:text-[28px]">Laisser un avis</h3>
             <p className="mt-2.5 text-[14.5px] leading-relaxed text-foreground-soft">
-              Votre avis est publié après validation par Aïssata.
+              Votre avis est publié après ma validation.
             </p>
             <div className="mt-5.5">
               <CommentForm slug={service.slug} />

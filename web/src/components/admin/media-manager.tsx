@@ -63,7 +63,7 @@ export function MediaManager({ serviceId, media }: { serviceId: string; media: M
       {media.length > 0 && (
         <div className="mt-5.5 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {media.map((m) => (
-            <div key={m.id} className="rounded-2xl border border-border bg-[#F5F1E9] p-3">
+            <div key={m.id} className="rounded-2xl border border-border bg-panel p-3">
               <div className="relative h-32 overflow-hidden rounded-[11px] bg-tint">
                 {m.type === "PHOTO" ? (
                   // eslint-disable-next-line @next/next/no-img-element

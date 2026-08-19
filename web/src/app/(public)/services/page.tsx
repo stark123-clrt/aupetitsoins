@@ -20,7 +20,7 @@ export default async function CataloguePage({
       <section className="mx-auto w-full max-w-[1360px] px-6 pt-9 sm:px-12">
         <div className="text-[13px] uppercase tracking-[0.1em] text-muted">Catalogue</div>
         <h1 className="mt-3.5 max-w-[720px] text-[40px] leading-[1.05] tracking-tight sm:text-[62px]">
-          Toutes nos prestations à domicile
+          Toutes mes prestations à domicile
         </h1>
         <p className="mt-5 max-w-[560px] text-[18px] leading-relaxed text-foreground-soft text-pretty">
           Filtrez par catégorie et ouvrez une fiche pour voir le détail, les photos et

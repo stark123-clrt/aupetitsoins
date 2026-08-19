@@ -1,23 +1,28 @@
 @import "tailwindcss";
 
+/* Palette dérivée du logo : rose poudré #dfa0a2 et taupe grège #b8a898.
+   Les valeurs de texte sont assombries par rapport au logo pour rester
+   lisibles (contraste ≥ 4.5 sur le fond). Le rose du logo est réservé aux
+   éléments décoratifs, où le contraste n'est pas requis. */
 :root {
-  --background: #fbf7f1;
-  --surface: #fffdfa;
-  --foreground: #1f3d30;
-  --foreground-soft: #4a5c52;
-  --muted: #7a6a55;
-  --muted-2: #9a8c77;
-  --accent: #c05c3c;
-  --accent-soft: #e9a87f;
-  --tint: #efe7da;
-  --border: #e7ddcc;
-  --border-2: #ede3d3;
-  --input: #dccfb9;
-  --success-bg: #e7f0e8;
-  --success-fg: #2f6b4f;
-  --pending-bg: #fbefe2;
+  --background: #fbf6f4;
+  --surface: #fffcfb;
+  --foreground: #4a3b37;
+  --foreground-soft: #6d5b54;
+  --muted: #7e6c63;
+  --muted-2: #a89890;
+  --accent: #a85462;
+  --accent-soft: #dfa0a2;
+  --tint: #f1e5e2;
+  --border: #eadfda;
+  --border-2: #f0e7e3;
+  --input: #dac9c2;
+  --panel: #f5efec;
+  --success-bg: #e9f0e9;
+  --success-fg: #4a6b52;
+  --pending-bg: #fbefe6;
   --pending-fg: #9a6a3c;
-  --danger: #b4462e;
+  --danger: #b0473c;
 }
 
 @theme inline {
@@ -33,6 +38,7 @@
   --color-border: var(--border);
   --color-border-2: var(--border-2);
   --color-input: var(--input);
+  --color-panel: var(--panel);
   --color-success-bg: var(--success-bg);
   --color-success-fg: var(--success-fg);
   --color-pending-bg: var(--pending-bg);

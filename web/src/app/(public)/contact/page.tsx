@@ -41,7 +41,7 @@ export default async function ContactPage() {
             <div className="mt-3 flex flex-col gap-2.5 text-[16px] text-foreground-soft">
               <span>50 % de crédit d&apos;impôt sur chaque prestation</span>
               <span>Devis gratuit et sans engagement</span>
-              <span>Aïssata, votre interlocutrice unique</span>
+              <span>Une seule interlocutrice, du début à la fin</span>
             </div>
           </div>
         </div>
