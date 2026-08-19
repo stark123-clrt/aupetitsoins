@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { MobileNav } from "./mobile-nav";
 
 const NAV = [
   { href: "/services", label: "Catalogue" },
@@ -19,7 +20,7 @@ export function SiteHeader() {
           priority
           className="h-11 w-auto"
         />
-        <span className="font-display text-[25px] tracking-tight text-foreground">
+        <span className="font-display text-[21px] tracking-tight text-foreground sm:text-[25px]">
           Aux Petits Soins
         </span>
       </Link>
@@ -32,10 +33,12 @@ export function SiteHeader() {
       </nav>
       <Link
         href="/contact"
-        className="rounded-full bg-foreground px-5 py-2.5 text-[14.5px] font-medium text-background hover:text-background"
+        className="hidden rounded-full bg-foreground px-5 py-2.5 text-[14.5px] font-medium text-background hover:text-background md:block"
       >
         Demander une prestation
       </Link>
+
+      <MobileNav items={NAV} />
     </header>
   );
 }
