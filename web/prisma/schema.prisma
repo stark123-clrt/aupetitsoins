@@ -1,0 +1,95 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+}
+
+/// Catégories gérées depuis l'administration (ajout, renommage, réordonnancement).
+model Category {
+  id          String   @id @default(uuid())
+  name        String
+  slug        String   @unique
+  description String   @default("")
+  position    Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  services Service[]
+}
+
+enum MediaType {
+  PHOTO
+  VIDEO
+}
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  fullName     String
+  role         Role     @default(ADMIN)
+  createdAt    DateTime @default(now())
+}
+
+model Service {
+  id            String          @id @default(uuid())
+  title         String
+  slug          String          @unique
+  description   String
+  durationLabel String
+  categoryId    String
+  active        Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  category Category  @relation(fields: [categoryId], references: [id])
+  media    Media[]
+  comments Comment[]
+}
+
+model Media {
+  id        String    @id @default(uuid())
+  type      MediaType
+  url       String
+  position  Int       @default(0)
+  createdAt DateTime  @default(now())
+
+  service   Service @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  serviceId String
+}
+
+model Comment {
+  id         String   @id @default(uuid())
+  authorName String
+  content    String
+  rating     Int      @default(5)
+  approved   Boolean  @default(false)
+  createdAt  DateTime @default(now())
+
+  service   Service @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  serviceId String
+}
+
+/// Réglages éditables du site (clé/valeur), par ex. la photo de la page À propos.
+model SiteSetting {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}
+
+model ContactRequest {
+  id                String   @id @default(uuid())
+  fullName          String
+  phone             String
+  email             String
+  desiredCategory   String
+  message           String
+  createdAt         DateTime @default(now())
+}

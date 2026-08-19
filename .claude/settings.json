@@ -7,7 +7,30 @@
       "Bash(/c/php/php.exe bin/console app:seed-users)",
       "Bash(/c/php/php.exe -r 'imagepng\\(imagecreatetruecolor\\(10,10\\), '\\\\''/c/Users/chris/AppData/Local/Temp/claude/c--Users-chris-Desktop-Aupetitsoin/a1d3fc1d-b257-470d-92f7-2f5635d18e08/scratchpad/test.png'\\\\''\\);')",
       "Bash(/c/php/php.exe -r \"imagepng\\(imagecreatetruecolor\\(10,10\\), 'C:\\\\\\\\\\\\\\\\Users\\\\\\\\\\\\\\\\chris\\\\\\\\\\\\\\\\AppData\\\\\\\\\\\\\\\\Local\\\\\\\\\\\\\\\\Temp\\\\\\\\\\\\\\\\claude\\\\\\\\\\\\\\\\c--Users-chris-Desktop-Aupetitsoin\\\\\\\\\\\\\\\\a1d3fc1d-b257-470d-92f7-2f5635d18e08\\\\\\\\\\\\\\\\scratchpad\\\\\\\\\\\\\\\\test.png'\\);\")",
-      "Bash(/c/php/php.exe /c/php/composer.phar require symfony/mime --no-interaction)"
+      "Bash(/c/php/php.exe /c/php/composer.phar require symfony/mime --no-interaction)",
+      "Bash(npx --yes create-next-app@latest web --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --turbopack --no-interactive)",
+      "Bash(npm approve-scripts *)",
+      "Bash(node -e \"console.log\\(require\\('crypto'\\).randomBytes\\(32\\).toString\\('base64'\\)\\)\")",
+      "Bash(npx prisma *)",
+      "Bash(node -e ' *)",
+      "Bash(npx tsx *)",
+      "Bash(mkdir -p \"/c/Users/chris/Desktop/Aupetitsoin/web/src/app/\\(public\\)/services/[slug]\" \"/c/Users/chris/Desktop/Aupetitsoin/web/src/app/\\(public\\)/a-propos\" \"/c/Users/chris/Desktop/Aupetitsoin/web/src/app/\\(public\\)/contact\" \"/c/Users/chris/Desktop/Aupetitsoin/web/src/app/connexion\" \"/c/Users/chris/Desktop/Aupetitsoin/web/src/app/admin/services\" \"/c/Users/chris/Desktop/Aupetitsoin/web/src/app/admin/avis\" *)",
+      "Bash(curl -s http://127.0.0.1:3100/)",
+      "Bash(curl -s http://127.0.0.1:3100/services)",
+      "Bash(curl -s http://127.0.0.1:3100/connexion)",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(MSYS_NO_PATHCONV=1 docker exec aupetitsoin-web-test sh -c \"ls -la /app/data/ && ls -la /app/ | head -20\")",
+      "Bash(MSYS_NO_PATHCONV=1 docker exec aupetitsoin-web-test sh -c \"find /app -name '*.db' 2>/dev/null\")",
+      "Bash(docker buildx *)",
+      "Bash(tasklist)",
+      "Bash(curl -s -o /dev/null -w \"landing: %{http_code}\\\\n\" http://localhost:3010/)",
+      "Bash(curl -s -o /dev/null -w \"catalogue: %{http_code}\\\\n\" http://localhost:3010/services)",
+      "Bash(curl -s -o /dev/null -w \"admin redirect: %{http_code}\\\\n\" http://localhost:3010/admin/services)",
+      "Bash(MSYS_NO_PATHCONV=1 docker exec aupetitsoin-test find /app -name \"*.db\")",
+      "Bash(curl -s http://localhost:3010/services)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\chris\\Desktop\\Aupetitsoin\\web\\src\\app\\(public)\\services"
     ]
   }
 }
