@@ -115,15 +115,43 @@ async function main() {
   const password = process.env.ADMIN_PASSWORD ?? "demo1234";
   const fullName = process.env.ADMIN_NAME ?? "Aïssata Diallo";
 
+  // ADMIN_PASSWORD fait autorité : l'application n'offre pas d'écran de
+  // changement de mot de passe, c'est donc la variable d'environnement qui
+  // définit l'accès. On resynchronise à chaque démarrage, sinon modifier la
+  // variable resterait sans effet sur un compte déjà créé.
   const existingAdmin = await prisma.user.findUnique({ where: { email } });
   if (!existingAdmin) {
-    const passwordHash = await bcrypt.hash(password, 10);
     await prisma.user.create({
-      data: { email, passwordHash, fullName, role: "ADMIN" },
+      data: {
+        email,
+        passwordHash: await bcrypt.hash(password, 10),
+        fullName,
+        role: "ADMIN",
+      },
     });
-    console.log(`Compte admin créé : ${email} / ${password}`);
+    console.log(`Compte admin créé : ${email}`);
   } else {
-    console.log("Compte admin déjà présent, non recréé.");
+    const sameName = existingAdmin.fullName === fullName;
+    const samePassword = await bcrypt.compare(password, existingAdmin.passwordHash);
+
+    if (samePassword && sameName) {
+      console.log("Compte admin à jour.");
+    } else {
+      await prisma.user.update({
+        where: { email },
+        data: {
+          fullName,
+          ...(samePassword
+            ? {}
+            : { passwordHash: await bcrypt.hash(password, 10) }),
+        },
+      });
+      console.log(
+        samePassword
+          ? "Compte admin : nom mis à jour."
+          : "Compte admin : mot de passe resynchronisé avec ADMIN_PASSWORD."
+      );
+    }
   }
 
   const categoryIds = new Map<CategoryKey, string>();
